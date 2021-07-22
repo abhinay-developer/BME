@@ -1,0 +1,21 @@
+
+
+create database BOOK_MY_EVENT;
+
+
+CREATE TABLE BME_TBL_USERS(user_id bigint primary key identity(1,1),username varchar(255),email varchar(255),password  varchar(255),mobile_number bigint,
+          gender varchar(255), dob varchar(255),address varchar(255), created_date date , updated_date date,login_time date, logout_time date);
+
+		  SELECT * FROM BME_TBL_USERS;
+
+CREATE TABLE BME_TBL_ADMIN(admin_id bigint primary key identity(1,1),
+              name varchar(255), email varchar(255),password  varchar(255),mobile_number bigint,login_time date, logout_time date);
+
+CREATE TABLE BME_TBL_SUPER_ADMIN(super_admin_id bigint primary key identity(1,1),
+              name varchar(255), email varchar(255),password  varchar(255),mobile_number bigint,login_time date, logout_time date);
+
+DROP TABLE BME_ADMIN;
+
+
+CREATE TABLE BME_TBL_EVENTS(event_id bigint primary key identity(1,1),
+             name varchar(255),venue varchar(255),location varchar(255),start_date date,end_date date,price decimal,description varchar(255));
